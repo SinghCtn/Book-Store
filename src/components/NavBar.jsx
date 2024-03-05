@@ -1,10 +1,16 @@
+import { NavLink } from "react-router-dom";
+
 function NavBar() {
   return (
     <nav className="flex justify-between items-center h-16 ">
       <Logo />
       <ul className="flex justify-evenly w-3/6">
-        <NavItems>Home</NavItems>
-        <NavItems>About Us</NavItems>
+        <NavItems>
+          <NavLink to="/">Home</NavLink>
+        </NavItems>
+        <NavItems>
+          <NavLink to="/aboutus">About Us</NavLink>
+        </NavItems>
         <NavItems>Blog</NavItems>
         <NavItems>Contact Us</NavItems>
       </ul>
@@ -15,7 +21,7 @@ function NavBar() {
 export default NavBar;
 
 function Logo() {
-  return <h1 className="w-1/6 text-[#AAABB8] text-2xl">Logo</h1>;
+  return <h1 className="w-1/6 text-[#AAABB8] text-2xl">Boundless Books</h1>;
 }
 
 function NavItems({ children }) {
